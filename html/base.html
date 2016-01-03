@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>KPO dataportal</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.9.0.min.css" type="text/css" />
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.9.0.min.js"></script>
+
+  </head>
+  <body>
+
+
+      <nav class="navbar navbar-default role="navigation"">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">KPO dataportal</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navigationbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Dashboard</a></li>
+              <li ><a href="#">Wellbook</a></li>
+            </ul>
+            <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">{{ current_user }}</a></p>
+          </div>
+        </div>
+      </nav>
+
+
+    {% block app_content %}{% endblock app_content %}
+
+    <script type="text/javascript" src='{{ STATIC_URL }}css/bootstrap-3.3.6-dist/js/bootstrap.min.js'></script>
+    <script type="text/javascript" src='{{ STATIC_URL }}js/test.js'></script>
+  </body>
+
+
+</html>

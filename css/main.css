@@ -1,0 +1,9 @@
+.navbar {
+  border-radius: 0 !important;
+}
+
+#units-header,#wells-header{
+  border-width:0;
+  background-color: white;
+  margin: 0px;
+}
