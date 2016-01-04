@@ -75,15 +75,31 @@
     <hr style="margin: 0px;"/>
     <div class="row">
       <div class="col-lg-12">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <table class="table table-hover table-bordered table-condensed">
+          <tr>
+            <th>Well name</th>
+            <th>Unit</th>
+            <th>GOR</th>
+            <th>WC</th>
+            <th>Oil production</th>
+            <th>Gas production</th>
+            <th>Water production</th>
+            <th>Chart</th>
+          </tr>
+          {% for plot in table_plots %}
+            <tr>
+              <td>Well name</td>
+              <td>Unit</td>
+              <td style="background-color: #fcf8e3;"> </td>
+              <td>WC</td>
+              <td style="width:200px">{{ plot.1|safe }} {{ plot.2|safe }}</td>
+              <td>Oil production</td>
+              <td>Gas production</td>
+              <td>Water production</td>
+            </tr>
+          {% endfor %}
+        </table>
+
       </div>
     </div>
 
